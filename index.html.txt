@@ -1,0 +1,254 @@
+<p>
+    &lt;!DOCTYPE html&gt;
+</p>
+<p>
+    &lt;html lang="ar" dir="rtl"&gt;
+</p>
+<p>
+    &lt;head&gt;
+</p>
+<p>
+        &lt;meta charset="UTF-8"&gt;
+</p>
+<p>
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+</p>
+<p>
+        &lt;title&gt;تطبيق مشاوير البيت&lt;/title&gt;
+</p>
+<p>
+</p>
+<p>
+        &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+</p>
+<p>
+        &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
+</p>
+<p>
+        &lt;meta name="apple-mobile-web-app-title" content="مشاويرنا"&gt;
+</p>
+<p>
+</p>
+<p>
+        &lt;style&gt;
+</p>
+<p>
+            :root { --main: #1c1c1e; --gold: #d4af37; --bg: #f2f2f7; --white: #ffffff; }
+</p>
+<p>
+            body { font-family: -apple-system, sans-serif; background-color: var(--bg); margin: 0; padding: 20px; color: var(--main); }
+</p>
+<p>
+            .container { max-width: 500px; margin: auto; }
+</p>
+<p>
+            .header { text-align: center; padding: 10px 0 20px; }
+</p>
+<p>
+            .header h1 { font-size: 26px; margin: 0; color: var(--main); }
+</p>
+<p>
+            /* لوحة الإحصائيات */
+</p>
+<p>
+            .stat-card { background: var(--main); color: white; border-radius: 20px; padding: 20px; display: flex; justify-content: space-around; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+</p>
+<p>
+            .stat-item { text-align: center; }
+</p>
+<p>
+            .stat-item div { font-size: 11px; opacity: 0.7; margin-bottom: 5px; }
+</p>
+<p>
+            .stat-item span { font-size: 22px; font-weight: bold; color: var(--gold); }
+</p>
+<p>
+            /* نموذج الطلب */
+</p>
+<p>
+            .form-card { background: var(--white); border-radius: 20px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+</p>
+<p>
+            label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; color: #555; }
+</p>
+<p>
+            input, select { width: 100%; padding: 14px; border: 1px solid #e5e5ea; border-radius: 12px; margin-bottom: 15px; font-size: 16px; box-sizing: border-box; -webkit-appearance: none; }
+</p>
+<p>
+</p>
+<p>
+            .price-box { background: #fffcf0; border: 1px solid #f9eeb1; border-radius: 12px; padding: 15px; text-align: center; margin-bottom: 15px; }
+</p>
+<p>
+            .price-box b { font-size: 24px; color: #b7950b; }
+</p>
+<p>
+            button { width: 100%; padding: 16px; border: none; border-radius: 15px; font-size: 18px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+</p>
+<p>
+            .btn-order { background-color: var(--main); color: white; margin-bottom: 10px; }
+</p>
+<p>
+            .btn-order:active { transform: scale(0.97); opacity: 0.8; }
+</p>
+<p>
+            /* سجل المشاوير */
+</p>
+<p>
+            .history-title { font-size: 18px; font-weight: 700; margin: 25px 5px 10px; }
+</p>
+<p>
+            .history-item { background: var(--white); border-radius: 15px; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-right: 5px solid var(--gold); }
+</p>
+<p>
+            .history-info div { font-size: 15px; font-weight: 600; }
+</p>
+<p>
+            .history-info small { color: #8e8e93; font-size: 12px; }
+</p>
+<p>
+            .history-price { font-weight: 800; font-size: 16px; }
+</p>
+<p>
+</p>
+<p>
+            .clear-btn { background: none; color: #ff3b30; font-size: 14px; padding: 10px; text-decoration: none; display: block; text-align: center; width: 100%; }
+</p>
+<p>
+        &lt;/style&gt;
+</p>
+<p>
+    &lt;/head&gt;
+</p>
+<p>
+    &lt;body&gt;
+</p>
+<p>
+    &lt;div class="container"&gt;
+</p>
+<p>
+        &lt;div class="header"&gt;
+</p>
+<p>
+            &lt;h1&gt;🏠 مشاوير البيت&lt;/h1&gt;
+</p>
+<p>
+        &lt;/div&gt;
+</p>
+<p>
+        &lt;div class="stat-card"&gt;
+</p>
+<p>
+            &lt;div class="stat-item"&gt;&lt;div&gt;إجمالي الحساب&lt;/div&gt;&lt;span id="totalM"&gt;0&lt;/span&gt; &lt;small&gt;ريال&lt;/small&gt;&lt;/div&gt;
+</p>
+<p>
+            &lt;div class="stat-item"&gt;&lt;div&gt;مجموع الكيلو&lt;/div&gt;&lt;span id="totalK"&gt;0&lt;/span&gt; &lt;small&gt;كم&lt;/small&gt;&lt;/div&gt;
+</p>
+<p>
+        &lt;/div&gt;
+</p>
+<p>
+        &lt;div class="form-card"&gt;
+</p>
+<p>
+            &lt;label&gt;غرض المشوار (مثل: البقالة)&lt;/label&gt;
+</p>
+<p>
+            &lt;input type="text" id="tripDesc" placeholder="ماذا تريد من المشوار؟"&gt;
+</p>
+<p>
+            &lt;label&gt;المسافة (بالكيلومتر)&lt;/label&gt;
+</p>
+<p>
+            &lt;input type="number" id="kmInput" placeholder="أدخل المسافة هنا..." oninput="calc()"&gt;
+</p>
+<p>
+            &lt;label&gt;نوع السيارة&lt;/label&gt;
+</p>
+<p>
+            &lt;select id="carSelect" onchange="calc()"&gt;
+</p>
+<p>
+                &lt;option value="10"&gt;تويوتا يارس 2023 (10 ريال/كم)&lt;/option&gt;
+</p>
+<p>
+                &lt;option value="15"&gt;تويوتا كامري 2025 LE (15 ريال/كم)&lt;/option&gt;
+</p>
+<p>
+            &lt;/select&gt;
+</p>
+<p>
+            &lt;div class="price-box"&gt;
+</p>
+<p>
+                حساب البنزين: &lt;b id="currentP"&gt;0&lt;/b&gt; &lt;b&gt;ريال&lt;/b&gt;
+</p>
+<p>
+            &lt;/div&gt;
+</p>
+<p>
+            &lt;button class="btn-order" onclick="sendOrder()"&gt;إرسال الطلب وحفظه&lt;/button&gt;
+</p>
+<p>
+        &lt;/div&gt;
+</p>
+<p>
+        &lt;div class="history-title"&gt;سجل الحسابات السابق&lt;/div&gt;
+</p>
+<p>
+        &lt;div id="historyList"&gt;&lt;/div&gt;
+</p>
+<p>
+        &lt;button class="clear-btn" onclick="clearAll()"&gt;× تصفير السجل تماماً&lt;/button&gt;
+</p>
+<p>
+    &lt;/div&gt;
+</p>
+<p>
+    &lt;script&gt;
+</p>
+<p>
+        const MY_PHONE = "966564522403"; // رقمك الذي سيستقبل الرسائل
+</p>
+<p>
+        function calc() {
+</p>
+<p>
+            const km = document.getElementById('kmInput').value;
+</p>
+<p>
+            const rate = document.getElementById('carSelect').value;
+</p>
+<p>
+            document.getElementById('currentP').innerText = (km * rate) || 0;
+</p>
+<p>
+        }
+</p>
+<p>
+        function sendOrder() {
+</p>
+<p>
+            const desc = document.getElementById('tripDesc').value || "مشوار عام";
+</p>
+<p>
+            const km = document.getElementById('kmInput').value;
+</p>
+<p>
+            const rate = document.getElementById('carSelect').value;
+</p>
+<p>
+            const carName = document.getElementById('carSelect').options[document.getElementById('carSelect').selectedIndex].text.split(' ')[0];
+</p>
+<p>
+            const cost = km * rate;
+</p>
+<p>
+            const timeStr = new Date().toLocaleTimeString('ar-SA', {hour:'2-digit', minute:'2-digit'}) + " | " + new Date().toLocaleDateString('ar-SA');
+</p>
+<p>
+            if(!km || km &lt;= 0) { alert("لطفاً حدد الكيلومترات"); return; }
+</p>
+<p>
+            // حفظ في الذاكرة المحلية للجوال
+</p>
